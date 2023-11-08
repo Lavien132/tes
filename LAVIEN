@@ -1,0 +1,202 @@
+NETWORK BAGIAN BAWAH
+router rip
+version 2
+network 192.168.1.0
+network 192.168.2.0
+network 192.168.3.0
+network 192.168.4.0
+network 192.168.5.0
+network 192.168.6.0
+network 192.168.7.0
+network 192.168.8.0
+network 192.168.9.0
+network 192.168.10.0
+network 10.10.10.0
+network 11.11.11.0
+network 12.12.12.0
+network 13.13.13.0
+network 20.20.20.0
+network 30.30.30.0
+network 40.40.40.0
+network 50.50.50.0
+network 60.60.60.0
+network 70.70.70.0
+network 80.80.80.0
+network 90.90.90.0
+network 100.100.100.0
+network 101.101.101.0
+no auto-summary
+passive-interface fa0/0
+ 
+NETWORK BAGIAN ATAS
+ router rip
+version 2
+network 192.168.1.0
+network 192.168.2.0
+network 192.168.3.0
+network 192.168.4.0
+network 192.168.5.0
+network 192.168.6.0
+network 192.168.7.0
+network 192.168.8.0
+network 192.168.9.0
+network 192.168.10.0
+network 10.10.10.0
+network 11.11.11.0
+network 12.12.12.0
+network 13.13.13.0
+network 20.20.20.0
+network 30.30.30.0
+network 40.40.40.0
+network 50.50.50.0
+network 60.60.60.0
+network 70.70.70.0
+network 80.80.80.0
+network 90.90.90.0
+network 100.100.100.0
+network 101.101.101.0
+no auto-summary
+
+ROUTER TENGAH
+Router(config)#int se2/0
+Router(config-if)#ip add 10.10.10.1 255.255.255.0
+Router(config-if)#no sh
+
+%LINK-5-CHANGED: Interface Serial2/0, changed state to down
+Router(config-if)#ex
+Router(config)#int se3/0
+Router(config-if)#ip add 11.11.11.1 255.255.255.0
+Router(config-if)#no sh
+
+%LINK-5-CHANGED: Interface Serial3/0, changed state to down
+Router(config-if)#ex
+Router(config)#int se6/0
+Router(config-if)#ip add 12.12.12.1 255.255.255.0
+Router(config-if)#no sh
+
+%LINK-5-CHANGED: Interface Serial6/0, changed state to down
+Router(config-if)#ex
+Router(config)#int se7/0
+Router(config-if)#ip add 13.13.13.1 255.255.255.0
+Router(config-if)#no sh
+ 
+ROUTER KIRI ATAS
+ Router(config)#int se2/0
+Router(config-if)#ip add 10.10.10.1 255.255.255.0
+Router(config-if)#no sh
+
+%LINK-5-CHANGED: Interface Serial2/0, changed state to down
+Router(config-if)#ex
+Router(config)#int se3/0
+Router(config-if)#ip add 11.11.11.1 255.255.255.0
+Router(config-if)#no sh
+
+%LINK-5-CHANGED: Interface Serial3/0, changed state to down
+Router(config-if)#ex
+Router(config)#int se6/0
+Router(config-if)#ip add 12.12.12.1 255.255.255.0
+Router(config-if)#no sh
+
+%LINK-5-CHANGED: Interface Serial6/0, changed state to down
+Router(config-if)#ex
+Router(config)#int se7/0
+Router(config-if)#ip add 13.13.13.1 255.255.255.0
+Router(config-if)#no sh
+
+ROUTER 2
+Router(config)#int se2/0
+Router(config-if)#ip add 11.11.11.2 255.255.255.0
+Router(config-if)#no sh
+
+Router(config-if)#
+%LINK-5-CHANGED: Interface Serial2/0, changed state to up
+
+Router(config-if)#ex
+Router(config)#int se3/0
+Router(config-if)#ip add 
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Serial2/0, changed state to up
+
+% Incomplete command.
+Router(config-if)#ip add 50.50.50.1 255.255.255.0
+Router(config-if)#no sh
+
+%LINK-5-CHANGED: Interface Serial3/0, changed state to down
+Router(config-if)#ex
+Router(config)#int se6/0
+Router(config-if)#ip add 60.60.60.1 255.255.255.0
+Router(config-if)#no sh
+
+%LINK-5-CHANGED: Interface Serial6/0, changed state to down
+Router(config-if)#
+Router(config-if)#ex
+Router(config)#int se7/0
+Router(config-if)#ip add 70.70.70.1 255.255.255.0
+Router(config-if)#no sh
+
+ROUTER 3
+Router(config)#int se2/0
+Router(config-if)#ip add 11.11.11.2 255.255.255.0
+Router(config-if)#no sh
+
+Router(config-if)#
+%LINK-5-CHANGED: Interface Serial2/0, changed state to up
+
+Router(config-if)#ex
+Router(config)#int se3/0
+Router(config-if)#ip add 
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Serial2/0, changed state to up
+
+% Incomplete command.
+Router(config-if)#ip add 50.50.50.1 255.255.255.0
+Router(config-if)#no sh
+
+%LINK-5-CHANGED: Interface Serial3/0, changed state to down
+Router(config-if)#ex
+Router(config)#int se6/0
+Router(config-if)#ip add 60.60.60.1 255.255.255.0
+Router(config-if)#no sh
+
+%LINK-5-CHANGED: Interface Serial6/0, changed state to down
+Router(config-if)#
+Router(config-if)#ex
+Router(config)#int se7/0
+Router(config-if)#ip add 70.70.70.1 255.255.255.0
+Router(config-if)#no sh
+
+ROUTER 4
+Router(config)#int se2/0
+Router(config-if)#ip add 11.11.11.2 255.255.255.0
+Router(config-if)#no sh
+
+Router(config-if)#
+%LINK-5-CHANGED: Interface Serial2/0, changed state to up
+
+Router(config-if)#ex
+Router(config)#int se3/0
+Router(config-if)#ip add 
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Serial2/0, changed state to up
+
+% Incomplete command.
+Router(config-if)#ip add 50.50.50.1 255.255.255.0
+Router(config-if)#no sh
+
+%LINK-5-CHANGED: Interface Serial3/0, changed state to down
+Router(config-if)#ex
+Router(config)#int se6/0
+Router(config-if)#ip add 60.60.60.1 255.255.255.0
+Router(config-if)#no sh
+
+%LINK-5-CHANGED: Interface Serial6/0, changed state to down
+Router(config-if)#
+Router(config-if)#ex
+Router(config)#int se7/0
+Router(config-if)#ip add 70.70.70.1 255.255.255.0
+Router(config-if)#no sh
+
+ROUTER BAWAH 
+Router(config)#int se2/0
+Router(config-if)#ip add 20.20.20.2 255.255.255.0
+Router(config-if)#no sh
+Router(config)#int se2/0
+Router(config-if)#ip add 20.20.20.2 255.255.255.0
+Router(config-if)#no sh
